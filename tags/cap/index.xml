@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CAP | Bluethon的小站</title><link>https://bluethon.me/tags/cap/</link><atom:link href="https://bluethon.me/tags/cap/index.xml" rel="self" type="application/rss+xml"/><description>CAP</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>© 2019-2019 Bluethon</copyright><lastBuildDate>Sun, 29 Sep 2019 00:40:08 +0800</lastBuildDate><image><url>https://bluethon.me/img/icon-192.png</url><title>CAP</title><link>https://bluethon.me/tags/cap/</link></image><item><title>CAP定理</title><link>https://bluethon.me/post/cap/</link><pubDate>Sun, 29 Sep 2019 00:40:08 +0800</pubDate><guid>https://bluethon.me/post/cap/</guid><description>
+&lt;h2 id=&#34;概念&#34;&gt;概念&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;分布式系统：在互相隔离的空间中，提供数据服务的系统。&lt;/li&gt;
+&lt;li&gt;CAP抽象：不同空间的数据，在同一时间，状态一致。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;解释&#34;&gt;解释&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;C：代表状态一致
+A：代表同一时间
+P：代表不同空间
+CP: 不同空间中的数据，如果要求他们所有状态一致，则必然不在同一时间。
+AP: 不同空间中，如果要求同一时间都可以从任意的空间拿到数据，则必然数据的状态不一致。
+CA: 不同空间的数据，如果要求任意时间都可以从任意空间拿到状态一致的数据，则空间数必然为1.
+&lt;/code&gt;&lt;/pre&gt;</description></item></channel></rss>
