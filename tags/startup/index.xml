@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>startup | Bluethon的小站</title><link>https://bluethon.me/tags/startup/</link><atom:link href="https://bluethon.me/tags/startup/index.xml" rel="self" type="application/rss+xml"/><description>startup</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>© 2019-2019 Bluethon</copyright><lastBuildDate>Mon, 11 Nov 2019 13:44:15 +0800</lastBuildDate><image><url>https://bluethon.me/img/icon-192.png</url><title>startup</title><link>https://bluethon.me/tags/startup/</link></image><item><title>Windows开机启动</title><link>https://bluethon.me/post/windows-startup/</link><pubDate>Mon, 11 Nov 2019 13:44:15 +0800</pubDate><guid>https://bluethon.me/post/windows-startup/</guid><description>
+&lt;h1 id=&#34;windows开机启动设置&#34;&gt;Windows开机启动设置&lt;/h1&gt;
+&lt;h2 id=&#34;缘由&#34;&gt;缘由&lt;/h2&gt;
+&lt;p&gt;今天准备把自己的ahk开机脚本停掉, 就需要打开Windows的开机启动文件夹, 如果自己手动开的话要很长, 然后就搜索能不能从启动直接打开, 最后顺带整理一下, 以便以后查询&lt;/p&gt;
+&lt;h2 id=&#34;启动文件夹&#34;&gt;启动文件夹&lt;/h2&gt;
+&lt;p&gt;这个就是以前常见的开始菜单的开始文件夹, 把快捷方式拖进去就可以达到开机启动的目的, 使用&lt;code&gt;win+R&lt;/code&gt;打开运行窗口&lt;/p&gt;
+&lt;p&gt;以下是当前用户的命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;shell:startup
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;以下是所有用户的命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;shell:common startup
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;任务管理器里的启动位置&#34;&gt;任务管理器里的启动位置&lt;/h2&gt;
+&lt;p&gt;这个位置就是我们打开任务管理器, 切换到启动标签看到的内容, 这部分需要修改注册表, 还是老样子, 打开运行, 输入&lt;code&gt;regedit&lt;/code&gt;打开注册表&lt;/p&gt;
+&lt;p&gt;在以下俩个路径下就是在任务管理器内看到的内容, 是不是有些想清除的其他软件~&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 本机(所有用户)
+HKLM\Software\Microsoft\Windows\CurrentVersion\Run
+# 当前用户
+HKCU\Software\Microsoft\Windows\CurrentVersion\Run
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.techjunkie.com/windows-10-startup-folder/&#34; target=&#34;_blank&#34;&gt;文章及评论区&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description></item></channel></rss>
