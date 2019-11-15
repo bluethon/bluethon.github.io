@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bluethon的小站</title><link>https://bluethon.me/</link><atom:link href="https://bluethon.me/index.xml" rel="self" type="application/rss+xml"/><description>Bluethon的小站</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>© 2019-2019 Bluethon</copyright><lastBuildDate>Fri, 15 Nov 2019 20:59:24 +0800</lastBuildDate><image><url>https://bluethon.me/img/icon-192.png</url><title>Bluethon的小站</title><link>https://bluethon.me/</link></image><item><title>Ubuntu关闭笔记本休眠</title><link>https://bluethon.me/post/ubuntu-close-lid-hibernate/</link><pubDate>Fri, 15 Nov 2019 20:59:24 +0800</pubDate><guid>https://bluethon.me/post/ubuntu-close-lid-hibernate/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>hibernate | Bluethon的小站</title><link>https://bluethon.me/tags/hibernate/</link><atom:link href="https://bluethon.me/tags/hibernate/index.xml" rel="self" type="application/rss+xml"/><description>hibernate</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>© 2019-2019 Bluethon</copyright><lastBuildDate>Fri, 15 Nov 2019 20:59:24 +0800</lastBuildDate><image><url>https://bluethon.me/img/icon-192.png</url><title>hibernate</title><link>https://bluethon.me/tags/hibernate/</link></image><item><title>Ubuntu关闭笔记本休眠</title><link>https://bluethon.me/post/ubuntu-close-lid-hibernate/</link><pubDate>Fri, 15 Nov 2019 20:59:24 +0800</pubDate><guid>https://bluethon.me/post/ubuntu-close-lid-hibernate/</guid><description>
 &lt;h1 id=&#34;ubuntu关闭笔记本盖休眠&#34;&gt;Ubuntu关闭笔记本盖休眠&lt;/h1&gt;
 &lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;不知道从什么时候开始, 就逐渐喜欢上了电脑不关机, 打开盖子一切都是上次关闭的样子, 马上就可以开始继续干活. Windows, Mac和Linux我都用过, Mac合盖并不会关机, 但是由于其较为卓越的电源管理和电池, 所以基本可以做到用完就合盖, 打开接着干, 确实非常方便, Windows的话, 在Win10+SSD的加持下, 打开休眠选项并设置合盖即休眠可以非常简单就达到效果, 所以win10下除了不时的更新强制重启外我也很少关机, 都是用完一合盖子拉倒&lt;/p&gt;
@@ -81,40 +81,4 @@ ResultActive=yes
 &lt;li&gt;&lt;a href=&#34;https://askubuntu.com/a/94963/537695&#34; target=&#34;_blank&#34;&gt;https://askubuntu.com/a/94963/537695&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://tipsonubuntu.com/2016/10/24/ubuntu-16-10-auto-shutdown-hibernate-lid-closed/&#34; target=&#34;_blank&#34;&gt;http://tipsonubuntu.com/2016/10/24/ubuntu-16-10-auto-shutdown-hibernate-lid-closed/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/blockquote&gt;</description></item><item><title>Windows开机启动</title><link>https://bluethon.me/post/windows-startup/</link><pubDate>Mon, 11 Nov 2019 13:44:15 +0800</pubDate><guid>https://bluethon.me/post/windows-startup/</guid><description>
-&lt;h1 id=&#34;windows开机启动设置&#34;&gt;Windows开机启动设置&lt;/h1&gt;
-&lt;h2 id=&#34;缘由&#34;&gt;缘由&lt;/h2&gt;
-&lt;p&gt;今天准备把自己的ahk开机脚本停掉, 就需要打开Windows的开机启动文件夹, 如果自己手动开的话要很长, 然后就搜索能不能从启动直接打开, 最后顺带整理一下, 以便以后查询&lt;/p&gt;
-&lt;h2 id=&#34;启动文件夹&#34;&gt;启动文件夹&lt;/h2&gt;
-&lt;p&gt;这个就是以前常见的开始菜单的开始文件夹, 把快捷方式拖进去就可以达到开机启动的目的, 使用&lt;code&gt;win+R&lt;/code&gt;打开运行窗口&lt;/p&gt;
-&lt;p&gt;以下是当前用户的命令&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;shell:startup
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;以下是所有用户的命令&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;shell:common startup
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;任务管理器里的启动位置&#34;&gt;任务管理器里的启动位置&lt;/h2&gt;
-&lt;p&gt;这个位置就是我们打开任务管理器, 切换到启动标签看到的内容, 这部分需要修改注册表, 还是老样子, 打开运行, 输入&lt;code&gt;regedit&lt;/code&gt;打开注册表&lt;/p&gt;
-&lt;p&gt;在以下俩个路径下就是在任务管理器内看到的内容, 是不是有些想清除的其他软件~&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# 本机(所有用户)
-HKLM\Software\Microsoft\Windows\CurrentVersion\Run
-# 当前用户
-HKCU\Software\Microsoft\Windows\CurrentVersion\Run
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.techjunkie.com/windows-10-startup-folder/&#34; target=&#34;_blank&#34;&gt;文章及评论区&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</description></item><item><title>CAP定理</title><link>https://bluethon.me/post/cap/</link><pubDate>Sun, 29 Sep 2019 00:40:08 +0800</pubDate><guid>https://bluethon.me/post/cap/</guid><description>
-&lt;h2 id=&#34;概念&#34;&gt;概念&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;分布式系统：在互相隔离的空间中，提供数据服务的系统。&lt;/li&gt;
-&lt;li&gt;CAP抽象：不同空间的数据，在同一时间，状态一致。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;解释&#34;&gt;解释&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;C：代表状态一致
-A：代表同一时间
-P：代表不同空间
-CP: 不同空间中的数据，如果要求他们所有状态一致，则必然不在同一时间。
-AP: 不同空间中，如果要求同一时间都可以从任意的空间拿到数据，则必然数据的状态不一致。
-CA: 不同空间的数据，如果要求任意时间都可以从任意空间拿到状态一致的数据，则空间数必然为1.
-&lt;/code&gt;&lt;/pre&gt;</description></item></channel></rss>
+&lt;/blockquote&gt;</description></item></channel></rss>
