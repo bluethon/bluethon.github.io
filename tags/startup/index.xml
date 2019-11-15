@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>startup | Bluethon的小站</title><link>https://bluethon.me/tags/startup/</link><atom:link href="https://bluethon.me/tags/startup/index.xml" rel="self" type="application/rss+xml"/><description>startup</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>© 2019-2019 Bluethon</copyright><lastBuildDate>Mon, 11 Nov 2019 13:44:15 +0800</lastBuildDate><image><url>https://bluethon.me/img/icon-192.png</url><title>startup</title><link>https://bluethon.me/tags/startup/</link></image><item><title>Windows开机启动</title><link>https://bluethon.me/post/windows-startup/</link><pubDate>Mon, 11 Nov 2019 13:44:15 +0800</pubDate><guid>https://bluethon.me/post/windows-startup/</guid><description>
-&lt;h1 id=&#34;windows开机启动设置&#34;&gt;Windows开机启动设置&lt;/h1&gt;
 &lt;h2 id=&#34;缘由&#34;&gt;缘由&lt;/h2&gt;
 &lt;p&gt;今天准备把自己的ahk开机脚本停掉, 就需要打开Windows的开机启动文件夹, 如果自己手动开的话要很长, 然后就搜索能不能从启动直接打开, 最后顺带整理一下, 以便以后查询&lt;/p&gt;
 &lt;h2 id=&#34;启动文件夹&#34;&gt;启动文件夹&lt;/h2&gt;
