@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ubuntu | Bluethon的小站</title><link>https://bluethon.me/tags/ubuntu/</link><atom:link href="https://bluethon.me/tags/ubuntu/index.xml" rel="self" type="application/rss+xml"/><description>ubuntu</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>© 2019-2019 Bluethon</copyright><lastBuildDate>Fri, 15 Nov 2019 20:59:24 +0800</lastBuildDate><image><url>https://bluethon.me/img/icon-192.png</url><title>ubuntu</title><link>https://bluethon.me/tags/ubuntu/</link></image><item><title>Ubuntu笔记本合盖休眠</title><link>https://bluethon.me/post/ubuntu-close-lid-hibernate/</link><pubDate>Fri, 15 Nov 2019 20:59:24 +0800</pubDate><guid>https://bluethon.me/post/ubuntu-close-lid-hibernate/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ubuntu | Bluethon的小站</title><link>https://bluethon.me/tags/ubuntu/</link><atom:link href="https://bluethon.me/tags/ubuntu/index.xml" rel="self" type="application/rss+xml"/><description>ubuntu</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>© 2019-2020 Bluethon</copyright><lastBuildDate>Fri, 15 Nov 2019 20:59:24 +0800</lastBuildDate><image><url>https://bluethon.me/img/icon-192.png</url><title>ubuntu</title><link>https://bluethon.me/tags/ubuntu/</link></image><item><title>Ubuntu笔记本合盖休眠</title><link>https://bluethon.me/post/ubuntu-close-lid-hibernate/</link><pubDate>Fri, 15 Nov 2019 20:59:24 +0800</pubDate><guid>https://bluethon.me/post/ubuntu-close-lid-hibernate/</guid><description>
 &lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;不知道从什么时候开始, 就逐渐喜欢上了电脑不关机, 打开盖子一切都是上次关闭的样子, 马上就可以开始继续干活. Windows, Mac和Linux我都用过, Mac合盖并不会关机, 但是由于其较为卓越的电源管理和电池, 所以基本可以做到用完就合盖, 打开接着干, 确实非常方便, Windows的话, 在Win10+SSD的加持下, 打开休眠选项并设置合盖即休眠可以非常简单就达到效果, 所以win10下除了不时的更新强制重启外我也很少关机, 都是用完一合盖子拉倒&lt;/p&gt;
 &lt;p&gt;就Linux下, 或者Ubuntu来说, 这个功能是没有的, 有的是一个&lt;code&gt;suspend&lt;/code&gt;的功能, 但是在我看来这个更像是深一点的睡眠功能, 类似Mac? 总之不时很满意, 因为我的笔记本是一个老式的二手ThinkPad, 电池并不好, 所以经常会在&lt;code&gt;suspend&lt;/code&gt;一段时间后关机, 所有的工作场景都没了, 开机还得从头来过, 非常不爽, 之前一直想找时间给ubuntu加上这块, 最近因为又开始给老婆写一个PDF转换工具, 突突突搞了几天, 趁着休息的空挡搞了一下, 然后记录一下过程和坑&lt;/p&gt;
@@ -48,6 +48,7 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;取消注释如下两行, 并修改值为&lt;code&gt;hibernate&lt;/code&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;HandleLidSwitch=hibernate
+# HandleLidSwitch=suspend-then-hibernate # 此值为先挂起一段时间后休眠
 HandleLidSwitchDocked=hibernate # 此处为外接显示器时合盖操作, 但我测试没有生效, 如果没有外接显示器, 可不设置
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;重启服务&lt;/p&gt;

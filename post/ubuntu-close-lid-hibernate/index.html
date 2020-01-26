@@ -10,6 +10,7 @@
 </code></pre><p>等电源灯熄灭后开机, 如果一切正常, 此时开机后就会恢复上次休眠时的内容了, 搞定</p><h2 id=合盖休眠>合盖休眠</h2><p>到这步为止, 系统已经可以正常休眠了, 但是每次敲命令肯定是有点不方便的, 那么我们接下来就是设置笔记本的合盖休眠了</p><p>这里有两个途径, 一个是使用<code>dconf</code>设置, 我测试没有成功, 此处介绍另一种, 直接修改文件</p><h3 id=设置dconf>设置dconf</h3><p>首先是设置dconf, 如果你没有设置过, 先安装设置工具</p><pre><code>sudo apt install dconf-editor
 </code></pre><p>打开如下路径<code>/org/gnome/settings-daemon/plugins/power/</code></p><ul><li>设置<code>lid-close-ac-action</code> -&gt; <code>nothing</code></li><li>设置<code>lid-close-battery-action</code> -&gt; <code>nothing</code></li></ul><p>此处还可以设置为挂起(suspend)或者睡眠, 但是设置为休眠时无效, 所以为了使用文件方式, 此处设置为<code>nothing</code></p><p>接下来修改文件</p><pre><code>sudo vim /etc/systemd/logind.conf
 </code></pre><p>取消注释如下两行, 并修改值为<code>hibernate</code></p><pre><code>HandleLidSwitch=hibernate
+# HandleLidSwitch=suspend-then-hibernate    # 此值为先挂起一段时间后休眠
 HandleLidSwitchDocked=hibernate     # 此处为外接显示器时合盖操作, 但我测试没有生效, 如果没有外接显示器, 可不设置
 </code></pre><p>重启服务</p><pre><code>sudo systemctl restart systemd-logind.service
 </code></pre><h3 id=添加顶部菜单休眠键>添加顶部菜单休眠键</h3><p>创建设置文件</p><pre><code>sudo vim /etc/polkit-1/localauthority/50-local.d/enable-hibernate.pkla
@@ -33,7 +34,7 @@ ResultActive=yes
         </div>
       </div>
       </div>
-    </script><script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin=anonymous></script><script src=/js/academic.min.0bf1e3db85cbb232372ed31d6f10dc70.js></script><div class=container><footer class=site-footer><p class=powered-by>&copy; 2019-2019 Bluethon &middot;
+    </script><script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin=anonymous></script><script src=/js/academic.min.0bf1e3db85cbb232372ed31d6f10dc70.js></script><div class=container><footer class=site-footer><p class=powered-by>&copy; 2019-2020 Bluethon &middot;
 Powered by the
 <a href=https://sourcethemes.com/academic/ target=_blank rel=noopener>Academic theme</a> for
 <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a>.
